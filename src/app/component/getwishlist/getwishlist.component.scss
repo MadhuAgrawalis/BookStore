@@ -1,0 +1,63 @@
+.wish-cal {
+    height: 55px;
+    background-color: #F5F5F5;
+    border: 1px solid #E4E4E4;
+}
+
+.home {
+    color: gray;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.content-box {
+    margin-left: 200px;
+    margin-top: 43px;
+    margin-right: 391px;
+    margin-bottom: 250px;
+}
+
+.img-content {
+    margin-left: 19px;
+    height: 90px;
+}
+
+.book-image {
+    width: 123px;
+}
+
+.description {
+    height: 85px;
+}
+
+.bookName {
+    margin: 0%;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.author {
+    margin-top: 5px;
+    color: gray;
+    font-size: small;
+}
+
+.del {
+    margin-left: 15px;
+    color: gray;
+}
+
+.head-link {
+    margin-left: 117px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+}
+
+.Homelink:hover {
+    cursor: pointer;
+}
+
+.deletebtn:hover {
+    color: gray;
+    cursor: pointer;
+}

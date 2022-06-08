@@ -1,0 +1,97 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.small {
+    width: 80%;
+}
+
+.tool {
+    background-color: brown;
+}
+
+#text {
+    color: white;
+}
+
+.img-Icon {
+    padding-left: 64%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.search {
+    margin-left: 3%;
+    width: 44%;
+    height: 54%;
+    padding: 0px;
+}
+
+.searchInput {
+    height: 50%;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: dimgrey;
+}
+
+.mat-card>:first-child,
+.mat-card-content>:first-child {
+    margin-top: 0px;
+    display: contents;
+    color: gray;
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    margin-right: -8%;
+    cursor: pointer;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    margin-right: 18%;
+    cursor: pointer;
+}
+
+.wishlistIcon {
+    color: brown;
+}
+
+.wishlistbutton {
+    margin-top: 1px;
+}
+
+.welcome {
+    margin-left: 40px;
+}
+
+.loginbutton {
+    height: 50%;
+    width: 65%;
+    margin-left: 27px;
+    border-color: brown;
+    color: brown;
+    cursor: pointer;
+    background: white;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 851px) and (-webkit-min-device-pixel-ratio: 1) {
+    .Profile {
+        margin-right: -60%;
+    }
+}

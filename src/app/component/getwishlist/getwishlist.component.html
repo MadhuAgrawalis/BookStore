@@ -1,0 +1,33 @@
+<div style="width: 100%; margin-top: 2%;">
+    <span class="home" routerLink="/dashbord/getallbook">Home/</span><span> MyWishlist </span>
+</div>
+<div class="content-box">
+    <div class="wish-cal" fxLayoutAlign="start center">
+        <div class="wishText" style="margin-left: 36px;">
+
+            <b>My Wishlist<span>({{wishListarray.length}})</span></b>
+
+        </div>
+    </div>
+    <mat-card class="wishlist" *ngFor="let list of wishListarray">
+
+        <div class="img-content" fxLayout="row" fxLayoutAlign="space-between center">
+
+            <div fxLayout="row">
+                <div class="book-image">
+                    <img src="../../../assets/book3.png" width="65px" height="85px">
+                </div>
+
+                <div class="description">
+                    <h4 class="bookName">{{list.product_id.bookName}}</h4>
+                    <h5 class="author">by {{list.product_id.author}}</h5>
+                    <h4 fxLayoutGap="5px"><b>Rs.{{list.product_id.price}}</b> <del class="del">Rs. 5000</del></h4>
+                </div>
+            </div>
+            <div class="delete">
+                <mat-icon class="deletebtn" (click)="deleteWishlist(list)">delete_outline</mat-icon>
+            </div>
+        </div>
+
+    </mat-card>
+</div>
