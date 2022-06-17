@@ -10,10 +10,11 @@ export class QuickviewComponent implements OnInit {
   Book: any;
   value: any
   feedback: any
-  feedbackarray: any;
+  array: any;
   rating: any;
   token: any;
   comment: any;
+
   
   
   constructor(private bookService: BookserviceService) { }
@@ -22,6 +23,8 @@ export class QuickviewComponent implements OnInit {
     this.BookId = localStorage.getItem("BookId");
     console.log(this.BookId);
     this.detailAllBook();
+    this.getfeedback();
+    
     
   }
  detailAllBook() {
@@ -40,15 +43,18 @@ export class QuickviewComponent implements OnInit {
     }
     this.bookService.addfeedbackService(this.BookId, data).subscribe((response: any) => {
       console.log("User Feedback", response);
+    
     })
   }
   getfeedback() {
     let reqdata = {
-      _id: this.BookId
+      product_id: this.BookId
     }
     this.bookService.getfeedBackService(reqdata).subscribe((response: any) => {
       console.log('User Feedback', response);
-      this.feedbackarray = response.result;
+      this.array = response.result;
+     
     });
   }
+ 
 }

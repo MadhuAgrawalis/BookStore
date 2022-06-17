@@ -16,7 +16,15 @@
                     <mat-tab-group>
                         <mat-tab label="Login">
                             <form [formGroup]="loginForm" (ngSubmit)="onLogin()" fxLayout="column" fxLayoutAlign="start start">
-
+                                <div>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Select an option</mat-label>
+                                        <mat-select formControlName="selectedValue" disableRipple>
+                                            <mat-option value="User">User</mat-option>
+                                            <mat-option value="Admin">Admin</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
 
                                 <div>
                                     <span>Email id</span>
@@ -62,7 +70,15 @@
                         <mat-tab label="SignUp">
                             <form [formGroup]="signupForm" fxLayout="column" fxLayoutAlign="start start">
 
-
+                                <div>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Select an option</mat-label>
+                                        <mat-select formControlName="selectedValue" disableRipple>
+                                            <mat-option value="User">User</mat-option>
+                                            <mat-option value="Admin">Admin</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
 
 
                                 <div>

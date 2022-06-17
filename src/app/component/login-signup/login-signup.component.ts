@@ -22,6 +22,7 @@ export class LoginSignupComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email ]],
       password: ['', [Validators.required ]],
+      selectedValue: ['', [Validators.required]],
      
     });
 
@@ -30,7 +31,7 @@ export class LoginSignupComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       mobileNumber: ['', [Validators.required]],
-     
+      selectedValue: ['', [Validators.required]],
      // service: ['advance']
     });
   }
@@ -43,18 +44,28 @@ export class LoginSignupComponent implements OnInit {
       password: this.loginForm.value.password
     }
     console.log(this.loginForm.value);
-    if (this.loginForm.valid) {
-      
+    if (this.loginForm.valid) 
+    {
+      if(this.loginForm.value.selectedValue=="User"){
+        console.log("valid");
+        console.log("User");
       this.userservice.loginUserService(reqData).subscribe((response: any) => {
         console.log(response);
         localStorage.setItem('token',response.result.accessToken);
        }, (error: any) => {
         console.log(error);
        })
-    }
+    }else if(this.loginForm.value.selectedValue=="Admin"){
+      this.userservice.adminLoginService(reqData).subscribe((result:any)=>{
+        console.log(result);
+        localStorage.setItem('token',result.result.accessToken)
+      })
     this.router.navigateByUrl('/dashbord/getallbook')
   }
-
+    
+};
+  
+}
  
     onSignup() {
       this.submitted = true
@@ -67,15 +78,28 @@ export class LoginSignupComponent implements OnInit {
       }
       console.log(this.signupForm.value);
       if (this.signupForm.valid) {
-        
+        if (this.signupForm.value.selectedValue == 'User') {
+          console.log("user");
+          console.log("valid");
           this.userservice.registerUserService(reqData).subscribe((response: any) => {
             console.log(response);
           }, (error: any) => {
             console.log(error);
           })
         } 
+        else if (this.signupForm.value.selectedValue == 'Admin') {
+          console.log("admin");
+          this.userservice.adminregistrationService(reqData).subscribe((response:any) => {
+            console.log(response);
+  
+          })
+        }
+      }
+      else {
+        console.log("invalid");
+  
       }
     }
   
-
+  }
 

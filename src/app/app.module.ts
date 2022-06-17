@@ -28,8 +28,10 @@ import { GetwishlistComponent } from './component/getwishlist/getwishlist.compon
 import { PlaceorderComponent } from './component/placeorder/placeorder.component';
 import {AuthguradServiceService} from './Services/authgurad-service.service';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { MatBadgeModule } from "@angular/material/badge";
+import { PipePipe } from './pipes/pipe.pipe';
+import { AddminComponent } from './component/addmin/addmin.component';
 
-import { PipePipe } from './pipes/pipe.pipe'
 
 @NgModule({
   declarations: [
@@ -42,6 +44,9 @@ import { PipePipe } from './pipes/pipe.pipe'
     GetwishlistComponent,
     PlaceorderComponent,
     PipePipe,
+    AddminComponent,
+   
+  
    
     
   
@@ -69,6 +74,7 @@ import { PipePipe } from './pipes/pipe.pipe'
     MatExpansionModule,
     MatRadioModule,
     NgxPaginationModule,
+    MatBadgeModule,
     BrowserAnimationsModule
   ],
   providers: [

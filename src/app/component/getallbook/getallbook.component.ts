@@ -10,25 +10,25 @@ import { DataServiceService} from 'src/app/Services/data-service.service';
   styleUrls: ['./getallbook.component.scss']
 })
 export class GetallbookComponent implements OnInit {
-  booksArray: any = [];
+  booksArray: any = [];//array is creat emty
   Book:any;
   Bookid:any;
   token:any;
   searchword: any;
-  page:number = 1;
+  page:number = 1;//this veriable initial value is 1 
   totalLength:any;
 
   constructor(private router: Router, private activatedRoute:ActivatedRoute,private httpGetAllBook: BookserviceService, private dataservice: DataServiceService) { }
 
   ngOnInit(): void {
    
-    this.dataservice.receivedData.subscribe((response:any) => {
+    this.dataservice.receivedData.subscribe((response:any) => {//in this recive the data from the sendData 
       console.log(response)
           this.searchword = response;
           console.log(this.searchword);
     }) ;
     
-    this.getAllBook();
+    this.getAllBook();//method call 
   }
  
 
@@ -36,7 +36,7 @@ export class GetallbookComponent implements OnInit {
   getAllBook() {
     this.httpGetAllBook.getallbooks().subscribe((response: any) => {
       console.log(response);
-      this.booksArray = response.result;
+      this.booksArray = response.result;//booksArray is veriable
       console.log(this.booksArray);
    
     });
@@ -56,12 +56,12 @@ export class GetallbookComponent implements OnInit {
 
   }
   quickview(Book:any){  
-    localStorage.setItem('BookId', Book._id); 
+    localStorage.setItem('BookId', Book._id); //setitem work the set the id BookId as string veriable 
     this.router.navigateByUrl('/dashbord/quickview/' + Book._id)
   }
   
   lowtohigh(){
-    this.booksArray= this.booksArray.sort((low:any,high:any)=> low.discountPrice-high.discountPrice);
+    this.booksArray= this.booksArray.sort((low:any,high:any)=> low.discountPrice-high.discountPrice);//low and high as argument pass in this sort the book from price 
     }
   hightolow(){
     this.booksArray= this.booksArray.sort((low:any,high:any)=> high.discountPrice-low.discountPrice);

@@ -23,7 +23,8 @@ export class MycartComponent implements OnInit {
   showCart = true;
   showContinueButton = true;
   cartcount: any;
-  booksArraycount: any
+  booksArraycount: any;
+  priceSum=0;    //deleare a variable initially assaing 0 value than fisty give 0+fristbookprice 
 
   constructor(private httpMyCart: BookserviceService, private formBuilder: FormBuilder, private router: Router,private dataservice: DataServiceService) { }
 
@@ -40,7 +41,7 @@ export class MycartComponent implements OnInit {
     });
 
   }
-  onSubmit() {
+  onSubmit() {//function name
     
     this.submitted = true;
     if (this.useraddressform.valid) {
@@ -56,12 +57,21 @@ export class MycartComponent implements OnInit {
       });
     }
   }
-  myCartbook() {
+  myCartbook() { //function name 
+    
     this.httpMyCart.getCart().subscribe((response: any) => {
       console.log(response);
       this.booksArray = response.result;
       console.log(this.booksArray);
-      this.booksArraycount = response.result.length
+
+         
+      response.result.forEach((e: any) => {
+      this.priceSum+=e.product_id.price;
+      });
+      console.log(this.priceSum);
+
+
+     this.booksArraycount = response.result.length
       console.log("CARTLIST=====>", this.booksArray);
       this.dataservice.sendData(this.booksArraycount)
     });
@@ -102,9 +112,10 @@ export class MycartComponent implements OnInit {
       orders: orders
     }
     console.log(reqdata)
-
+    
     this.httpMyCart.myorder(reqdata).subscribe((response:any) => {
       console.log('successfully ordered', response);
+      
       this.router.navigate(['/dashbord/placeorder'])
     })
   }

@@ -64,16 +64,16 @@
                         <div>
                             <div class="rate ">
 
-                                <input type="radio " id="star5 " name="rate " [(ngModel)]="value" value="5 " />
-                                <label for="star5 " title="Extremely Good ">5 stars</label>
-                                <input type="radio " id="star4 " name="rate " [(ngModel)]="value" value="4 " />
-                                <label for="star4 " title="Very Good ">4 stars</label>
-                                <input type="radio " id="star3 " name="rate " [(ngModel)]="value" value="3 " />
-                                <label for="star3 " title="Good ">3 stars</label>
-                                <input type="radio " id="star2 " name="rate " [(ngModel)]="value" value="2 " />
-                                <label for="star2 " title="Not Bad ">2 stars</label>
-                                <input type="radio " id="star1 " name="rate " [(ngModel)]="value" value="1 " />
-                                <label for="star1 " title="Bad ">1 star</label>
+                                <input type="radio" id="star5" name="rate" [(ngModel)]="value" value="5" />
+                                <label for="star5" title="Extremely Good ">5 stars</label>
+                                <input type="radio" id="star4" name="rate" [(ngModel)]="value" value="4" />
+                                <label for="star4" title="Very Good ">4 stars</label>
+                                <input type="radio" id="star3" name="rate" [(ngModel)]="value" value="3" />
+                                <label for="star3" title="Good ">3 stars</label>
+                                <input type="radio" id="star2" name="rate" [(ngModel)]="value" value="2" />
+                                <label for="star2" title="Not Bad ">2 stars</label>
+                                <input type="radio" id="star1" name="rate" [(ngModel)]="value" value="1" />
+                                <label for="star1" title="Bad">1 star</label>
                             </div>
                         </div>
 
@@ -84,22 +84,22 @@
                     <div fxLayoutAlign="end center ">
                         <button class="submitbutton " mat-flat-button color="primary " (click)="addfeedback()">Submit</button>
                     </div>
+
                     <div style="display: flex; flex-direction: column-reverse;">
-                        <div class="feedback-box" fxLayoutGap="20px" *ngFor="let feedback of feedbackarray">
-                            <div class="user">
-                                <span class="user-feedback"> <b>CustomerName:</b>{{(feedback.customername_id.fullName)}}</span>
-                            </div>
+                        <div class="element" fxLayoutGap="50px" *ngFor="let feedback of array" fxLayout="column">
                             <div>
-                                <span class="user-rating"> <b>Rating:</b>{{feedback.rating}}</span>
-                            </div>
-                            <div>
-                                <span class="user-comment"><b>Comment:</b>{{feedback.comment}}</span>
+                                <div>
+                                    <span class="fullName"><b>FullName:</b>{{feedback.user_id.fullName}}</span>
+                                </div>
+                                <div>
+                                    <span class="element-rating"> <b>Rating:</b>{{feedback.rating}}</span>
+                                </div>
+                                <div>
+                                    <span class="comment"><b>Comment:</b>{{feedback.comment}}</span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-        </div>
-    </div>

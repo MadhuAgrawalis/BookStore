@@ -1,261 +1,369 @@
-.mainheader {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 94vh;
-}
-
-.header {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    height: 90vh;
-}
-
-.smallimages {
-    margin-left: 50px;
-    margin-top: 28%;
-}
-
-.small1 {
-    border: 1px solid rgb(165, 42, 42);
-    background-color: rgba(255, 192, 203, 0.562);
-    padding: 4px;
-}
-
-.img1 {
-    width: 40px;
-    height: 50px;
-    padding-top: 5px;
-}
-
-.small2 {
-    border: 1px solid gainsboro;
-    padding: 4px;
-}
-
-.img2 {
-    width: 40px;
-    height: 50px;
-    padding-top: 3px;
-}
-
-.maincontent {
-    width: 100%;
-    padding: 1%;
-    margin-top: 2%;
-    align-items: flex-start !important;
-}
-
-.image {
-    padding: 50%;
-    height: 300px;
-    width: 100%;
-    border: 3px solid gainsboro;
-}
-
-.btn {
-    background-color: brown;
-    color: white;
-    border: none;
-    height: 35px;
-    margin-top: 130%;
-    width: 82%;
-    margin-left: -101%;
-    cursor: pointer;
-}
-
-.btn2 {
-    background-color: black;
-    color: white;
-    margin-top: 130%;
-    width: 78%;
-    height: 35px;
-    margin-left: 18%;
-    cursor: pointer;
-}
-
-#fav-icons {
-    color: white;
-    font-size: 122%;
-    padding-top: 4px;
-}
-
-.bookdetails {
-    width: 55%;
-}
-
-.bookname {
-    font-size: 26px;
-    margin-top: 6%;
-    padding-left: 19%;
-}
-
-.author {
-    color: grey;
-    font-size: 14px;
-    padding-top: 3%;
-    padding-left: 19%;
-}
-
-.rating {
-    background: rgba(0, 100, 0, 0.87);
-    height: 20px;
-    width: 46px;
-    color: white;
-    margin-bottom: 10px;
-    margin-top: 1%;
-    margin-left: 19%;
-}
-
-.Star {
-    height: 15px;
-    width: 15px;
-    font-size: 10px;
-    margin-top: -1px;
-}
-
-#count {
-    margin-left: 33%;
-    margin-top: 5%;
-    color: gray;
-}
-
-.count {
-    margin-left: 20px;
-    font-size: 15px;
-    opacity: 0.6;
-    margin-top: -0px;
-    margin-bottom: 25px;
-}
-
-.quantity {
-    font-size: 15px;
-    margin-top: 23px;
-    margin-left: 55px;
-    color: grey;
-}
-
-.price {
-    font-size: 20px;
-}
-
-.discountprice {
-    font-weight: 600;
-    margin-left: 19%;
-}
-
-.originalprice {
-    color: grey;
-    margin-left: 9%;
-}
-
-.para {
-    padding-left: 8%;
-    padding-top: 5%;
-}
-
-.booktitle {
-    margin-left: 12%;
-    font-size: medium;
-    color: gray;
-}
-
-.bookparagraph {
-    margin-left: 12%;
-    font-size: small;
-    color: gray;
-}
-
-.feedback {
-    font-size: 18px;
-    margin-top: 20px;
-    margin-left: 19%;
-}
-
-.overallrating {
-    height: 32%;
-    background: whitesmoke;
-    margin-left: 19%;
-}
-
-.rate-para {
-    margin-left: 15px;
-}
-
-.ratename {
-    font-size: 13px;
-    font-weight: 500;
-    margin-top: 10px;
-}
-
-.rate1 {
-    padding: 0px;
-    width: 100%;
-    background-color: #E4E4E4;
-}
-
-.rate {
-    margin-right: 40%;
-}
-
-.rate:not(:checked)>input {
-    position: absolute;
-    top: -9999px;
-}
-
-.rate:not(:checked)>label {
-    float: right;
-    width: 1em;
-    margin-bottom: 4px;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 30px;
-    color: #ccc;
-}
-
-.rate:not(:checked)>label:before {
-    content: '★ ';
-}
-
-.rate>input:checked~label {
-    color: #ffc700;
-}
-
-.review {
-    height: 60px;
-    width: 90%;
-    border: none;
-    outline: none;
-    margin-left: 20px;
-    font-size: 15px;
-    opacity: 0.6;
-}
-
-.submitbutton {
-    height: 33px;
-    width: 95px;
-    margin-right: 35px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: white;
-    background: blue;
-    border: none;
-}
-
-.userfeedback {
-    // border: 1px solid gainsboro;
-    margin-top: 20px;
-    margin-left: 5px;
-}
-
-.feedback-box {
-    margin: 5px;
-    border: 1px solid;
-    background: white;
-}
-
-.user {
-    margin-top: 1px;
-}
+    .mainheader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 94vh;
+    }
+    
+    .header {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        height: 90vh;
+    }
+    
+    .smallimages {
+        margin-left: 50px;
+        margin-top: 28%;
+    }
+    
+    .small1 {
+        border: 1px solid rgb(165, 42, 42);
+        background-color: rgba(255, 192, 203, 0.562);
+        padding: 4px;
+    }
+    
+    .img1 {
+        width: 40px;
+        height: 50px;
+        padding-top: 5px;
+    }
+    
+    .small2 {
+        border: 1px solid gainsboro;
+        padding: 4px;
+    }
+    
+    .img2 {
+        width: 40px;
+        height: 50px;
+        padding-top: 3px;
+    }
+    
+    .maincontent {
+        width: 100%;
+        padding: 1%;
+        margin-top: 2%;
+        align-items: flex-start !important;
+    }
+    
+    .image {
+        padding: 50%;
+        height: 300px;
+        width: 100%;
+        border: 3px solid gainsboro;
+    }
+    
+    .btn {
+        background-color: brown;
+        color: white;
+        border: none;
+        height: 35px;
+        margin-top: 130%;
+        width: 82%;
+        margin-left: -101%;
+        cursor: pointer;
+    }
+    
+    .btn2 {
+        background-color: black;
+        color: white;
+        margin-top: 130%;
+        width: 78%;
+        height: 35px;
+        margin-left: 18%;
+        cursor: pointer;
+    }
+    
+    #fav-icons {
+        color: white;
+        font-size: 122%;
+        padding-top: 4px;
+    }
+    
+    #bookdetails {
+        width: 55%;
+    }
+    
+    .bookname {
+        font-size: 26px;
+        margin-top: 6%;
+        padding-left: 19%;
+    }
+    
+    .author {
+        color: grey;
+        font-size: 14px;
+        padding-top: 3%;
+        padding-left: 19%;
+    }
+    
+    .rating {
+        background: rgba(0, 100, 0, 0.87);
+        height: 20px;
+        width: 46px;
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 1%;
+        margin-left: 19%;
+    }
+    
+    .Star {
+        height: 15px;
+        width: 15px;
+        font-size: 10px;
+        margin-top: -1px;
+    }
+    
+    #count {
+        margin-left: 33%;
+        margin-top: 5%;
+        color: gray;
+    }
+    
+    .count {
+        margin-left: 20px;
+        font-size: 15px;
+        opacity: 0.6;
+        margin-top: -0px;
+        margin-bottom: 25px;
+    }
+    
+    .quantity {
+        font-size: 15px;
+        margin-top: 23px;
+        margin-left: 55px;
+        color: grey;
+    }
+    
+    .price {
+        font-size: 20px;
+    }
+    
+    .discountprice {
+        font-weight: 600;
+        margin-left: 19%;
+    }
+    
+    .originalprice {
+        color: grey;
+        margin-left: 9%;
+    }
+    
+    .para {
+        padding-left: 8%;
+        padding-top: 5%;
+    }
+    
+    .booktitle {
+        margin-left: 12%;
+        font-size: medium;
+        color: gray;
+    }
+    
+    .bookparagraph {
+        margin-left: 12%;
+        font-size: small;
+        color: gray;
+    }
+    
+    .feedback {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-left: 19%;
+    }
+    
+    .overallrating {
+        height: 32%;
+        background: whitesmoke;
+        margin-left: 19%;
+    }
+    
+    .rate-para {
+        margin-left: 15px;
+    }
+    
+    .ratename {
+        font-size: 13px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    
+    .rate1 {
+        padding: 0px;
+        width: 100%;
+        background-color: #E4E4E4;
+    }
+    
+    .rate {
+        margin-right: 40%;
+    }
+    
+    .rate:not(:checked)>input {
+        position: absolute;
+        top: -9999px;
+    }
+    
+    .rate:not(:checked)>label {
+        float: right;
+        width: 1em;
+        margin-bottom: 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
+    
+    .rate:not(:checked)>label:before {
+        content: '★ ';
+    }
+    
+    .rate>input:checked~label {
+        color: #ffc700;
+    }
+    
+    .review {
+        height: 60px;
+        width: 90%;
+        border: none;
+        outline: none;
+        margin-left: 20px;
+        font-size: 15px;
+        opacity: 0.6;
+    }
+    
+    .submitbutton {
+        height: 33px;
+        width: 95px;
+        margin-right: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: white;
+        background: blue;
+        border: none;
+    }
+    
+    .userfeedback {
+        // border: 1px solid gainsboro;
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+    
+    .feedback-box {
+        margin: 5px;
+        border: 1px solid;
+        background: white;
+    }
+    
+    .element {
+        margin-top: 1px;
+        margin: 5px;
+        border: 1px solid;
+    }
+    
+    @media (max-width: 700px) {
+        #mainheader {
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+        .booktitle {
+            font-size: 21px;
+            padding-top: 19%;
+            margin-left: 12%;
+        }
+        .price {
+            font-size: 20px;
+        }
+        .discountprice {
+            font-weight: 600;
+            margin-left: 20%;
+        }
+        .originalprice {
+            color: grey;
+            margin-left: 9%;
+        }
+        .author {
+            color: grey;
+            font-size: 21px;
+            padding-top: 3%;
+            // padding-left: 19%;
+            margin-left: -1%;
+        }
+        .rating {
+            background: rgba(0, 100, 0, 0.87);
+            height: 37px;
+            width: 81px;
+            padding: 1px;
+            margin-bottom: 10px;
+            margin-top: 1%;
+            margin-left: 18%;
+        }
+        .Star {
+            height: 15px;
+            width: 15px;
+            font-size: 10px;
+            margin-top: -1px;
+        }
+        .bookname {
+            //font-size: 36px;
+            margin-top: 267%;
+            margin-left: -1%;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .bookdetails {
+            flex-direction: column;
+            justify-content: center;
+            font-size: 36px;
+            margin-top: -275%;
+            margin-left: -126%;
+        }
+        .overallrating {
+            margin-left: 18%;
+        }
+        .feedback {
+            //font-size: 18px;
+            // margin-top: 20px;
+            margin-left: 18%;
+        }
+        .para {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .bookparagraph {
+            flex-direction: column;
+            justify-content: center;
+            font-size: 16px;
+            // margin-top: -333%;
+            // padding-right: 17%;
+            margin-left: 11%;
+        }
+        .userfeedback {
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30%;
+        }
+        .feedback-box {
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30%;
+            margin: 5px;
+            border: 1px solid;
+            background: white;
+        }
+        b {
+            font-weight: normal;
+            letter-spacing: 0px;
+        }
+        .element {
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid;
+            margin-top: 0px;
+            margin: 15px;
+            height: 100px;
+            width: 500px;
+            margin-left: -1%;
+        }
+    }

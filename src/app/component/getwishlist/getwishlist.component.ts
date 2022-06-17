@@ -11,7 +11,7 @@ import { DataServiceService } from 'src/app/Services/data-service.service';
 export class GetwishlistComponent implements OnInit {
 
   constructor(private httpGetWishlist: BookserviceService,private router: Router,private dataService: DataServiceService) { }
-  wishListarray: any = [];
+  wishListarray: any = [];//this declear veriable and array is pass
 
   ngOnInit(): void {
     this.getWishlist();

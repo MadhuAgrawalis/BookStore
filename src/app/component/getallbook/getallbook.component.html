@@ -17,28 +17,27 @@
 
     <div fxLayoutAlign="center center" fxLayout="row wrap" fxLayoutGap="20px">
         <div class="entirebook" *ngFor="let Book of booksArray | pipe:searchword | paginate: { itemsPerPage: 07, currentPage: page, totalItems:totalLength }  ">
-            <div class=" bookimg ">
-                <img class="img1 " src="../../../assets/book3.png  " alt=" " (click)="quickview(Book)">
+            <div class="bookimg">
 
-
-                <h2 class="title ">{{Book.bookName}}</h2>
-
-                <p class="para ">by {{Book.author}}</p>
+                <img class="img1" src="../../../assets/book3.png  " alt=" " (click)="quickview(Book)">
+                <h2 class="title">{{Book.bookName}}</h2>
+                <!-- <--//{{}} this is interpoluthon use double curly breas and in this data binding use from ts to html -->
+                <p class="para">by{{Book.author}}</p>
 
                 <div fxLayout=row>
-                    <div class="rating " fxLayoutAlign="space-evenly center ">
-                        4.5<img class="Star " src="../../../assets/star_outline_white_24dp.svg " alt=" ">
+                    <div class="rating" fxLayoutAlign="space-evenly center">
+                        4.5<img class="Star" src="../../../assets/star_outline_white_24dp.svg " alt=" ">
                     </div>
-                    <p class="count ">(20)</p>
+                    <p class="count">(20)</p>
                 </div>
-                <div class="price-container ">
-                    <div class="dicounted-price ">
+                <div class="price-container">
+                    <div class="dicounted-price">
                         <b>Rs.1000</b>
                     </div>
-                    <div class="actual-price "> Rs.{{Book.price}}</div>
-                    <button mat-raised-button class="add-btn " (click)="addTobag(Book) "> ADD TO BAG </button>
+                    <div class="actual-price"> Rs.{{Book.price}}</div>
+                    <button mat-raised-button class="add-btn" (click)="addTobag(Book)"> ADD TO BAG </button>
 
-                    <button mat-raised-button class="btn2 " (click)="addToWishlist(Book) ">WHISHLIST </button>
+                    <button mat-raised-button class="btn2" (click)="addToWishlist(Book)">WHISHLIST </button>
                 </div>
             </div>
 

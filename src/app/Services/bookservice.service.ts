@@ -69,7 +69,7 @@ getfeedBackService(data: any) {
     })
   }
 
-  return this.httpService.getService(`get/feedback/${data._id}`, true, header);
+  return this.httpService.getService('get/feedback/'+ data.product_id,true,header);
 
 }
 MyOrder(reqdata: any) {

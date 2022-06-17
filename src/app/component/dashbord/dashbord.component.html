@@ -13,6 +13,7 @@
           </button>
                 <input class="searchInput" type="text" name="search" placeholder="Search.." #search (keyup)="clearFilter(search.value)" />
             </mat-card>
+            <!-- keyup is event occurs when a keyoard key is released aattach the function  -->
             <button class="Profile" mat-button [matMenuTriggerFor]="menu">Profile 
                 <mat-icon class="searchIcon">perm_identity</mat-icon> 
                 <mat-menu class="matmenu" #menu="matMenu">
@@ -24,19 +25,29 @@
                     <button class="wishlistbutton" mat-menu-item  fxLayoutAlign.sm="end center" (click)="getwishlist()">
                       <mat-icon class="wishlistIcon">favorite</mat-icon> My Wishlist
                     </button>
-
+            <!-- click is also event and click on button is use in specified method or function   -->
             <div style="margin-top: 10px;" mat-menu-item fxLayoutGap="0px">
                 <button (click)="Logout()" class="loginbutton">Logout</button>
             </div>
             </mat-menu>
 
             </button>
-            <div fxLayout="row" fxLayoutAlign=" " fxLayoutAlign.sm="end center">
+            <!-- <div fxLayout="row" fxLayoutAlign=" " fxLayoutAlign.sm="end center">
                 <button class="cart" mat-button routerLink="./mycart">Cart<mat-icon>shopping_cart</mat-icon></button>
+            </div> -->
+            <div class="cart" (click)="mycart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
+                <button style="background-color:darkred; border: none; cursor: pointer;" matBadge={{badgecount}} matBadgeSize="small" matBadgePosition="after" matBadgeColor="warn" [matBadgeHidden]="badgecount==0">
+                <img class="cartimg" src="../../../assets/shopping_cart_white_24dp (1).svg" alt="">
+                </button>
+                <p style="margin-top:-10px;">cart</p>
             </div>
+
+
+
         </mat-toolbar>
     </div>
     <div>
         <router-outlet></router-outlet>
     </div>
+
 </div>
