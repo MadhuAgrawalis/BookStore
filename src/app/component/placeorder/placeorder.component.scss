@@ -1,17 +1,31 @@
-table,
-th,
-td {
-    border: 1px solid black;
-}
-
-.continuebutton {
-    background-color: blue;
-    color: white;
-    border: none;
-    margin-top: 40px;
-    margin-left: 50px;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    justify-content: center;
-}
+                        table,
+                        th,
+                        td {
+                            border: 1px solid black;
+                        }
+                        
+                        .src {
+                            width: 200px;
+                            height: 200px;
+                        }
+                        
+                        .continuebutton {
+                            background-color: blue;
+                            color: white;
+                            border: none;
+                            margin-top: 40px;
+                            margin-left: 50px;
+                            width: 200px;
+                            height: 40px;
+                            text-align: center;
+                            justify-content: center;
+                        }
+                        
+                        @media (max-width: 300px) {
+                            table,
+                            th,
+                            td {
+                                width: 200px;
+                                margin-top: 40px;
+                            }
+                        }

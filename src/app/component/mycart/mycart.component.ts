@@ -25,12 +25,16 @@ export class MycartComponent implements OnInit {
   cartcount: any;
   booksArraycount: any;
   priceSum=0;    //deleare a variable initially assaing 0 value than fisty give 0+fristbookprice 
-
+  item_qty = 1;
+  data: any
+  _id:any;
+ 
+  // quantitiy: boolean = false;
   constructor(private httpMyCart: BookserviceService, private formBuilder: FormBuilder, private router: Router,private dataservice: DataServiceService) { }
 
   ngOnInit(): void {
    this.myCartbook();
-
+   
      this.useraddressform = this.formBuilder.group({
       fullName: ['', Validators.required],
       mobileNumber: ['', [Validators.required]],
@@ -58,7 +62,7 @@ export class MycartComponent implements OnInit {
     }
   }
   myCartbook() { //function name 
-    
+   
     this.httpMyCart.getCart().subscribe((response: any) => {
       console.log(response);
       this.booksArray = response.result;
@@ -100,10 +104,10 @@ export class MycartComponent implements OnInit {
     for (this.Book of this.booksArray) {
 
       let order = {
-        "product_id": this.Book.product_id._id,
-        "product_name": this.Book.product_id.bookName,
-        "product_quantity": this.Book.product_id.quantity,
-        "product_price": this.Book.product_id.price,
+        product_id: this.Book.product_id._id,
+        product_name: this.Book.product_id.bookName,
+        product_quantity: this.Book.product_id.quantity,
+        product_price: this.Book.product_id.price,
       }
 
       orders.push(order)
@@ -119,6 +123,36 @@ export class MycartComponent implements OnInit {
       this.router.navigate(['/dashbord/placeorder'])
     })
   }
+  increase(Book: any) {
+    this.item_qty = Book.quantityToBuy;
+    this.item_qty += 1;
+    console.log("increased",this.item_qty);
+    this.updateCount(Book);
+  }
+
+
+
+  decrease(Book: any) {
+    this.item_qty =Book.quantityToBuy;
+    if (this.item_qty > 0) {
+      this.item_qty -= 1;
+      console.log( "decrease", this.item_qty);
+      this.updateCount(Book);
+    }
+
+  }
+
+  updateCount(Book: any) {
+    let reqPayload = {
+      quantityToBuy: this.item_qty
+    }
+    this.httpMyCart.updateCountService(Book.product_id._id, reqPayload).subscribe((response:any) => {
+       console.log(response) 
+     
+  })
+  
+  }
+
 
 
 }

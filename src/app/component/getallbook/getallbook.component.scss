@@ -1,161 +1,189 @@
-        .bookCount {
-            margin-left: 4%;
-            margin-top: 40px;
-        }
-        
-        #book-count {
-            margin-top: -20px;
-            margin-left: 111%;
-            font-size: medium;
-            color: gainsboro;
-        }
-        
-        .books {
-            font-size: 25px;
-        }
-        
-        .sort {
-            margin-top: -24px;
-            margin-left: 61%;
-            border-radius: none;
-            outline: none;
-        }
-        
-        .count {
-            margin-left: 20px;
-            font-size: 15px;
-            opacity: 0.6;
-            margin-top: -17px;
-        }
-        
-        .matselect {
-            color: brown;
-            height: 10px;
-            outline: none;
-        }
-        
+    .bookCount {
+        margin-left: 4%;
+        margin-top: 40px;
+    }
+    
+    #book-count {
+        margin-top: -20px;
+        margin-left: 111%;
+        font-size: medium;
+        color: gainsboro;
+    }
+    
+    .books {
+        font-size: 25px;
+    }
+    
+    .sort {
+        margin-top: -24px;
+        margin-left: 61%;
+        border-radius: none;
+        outline: none;
+    }
+    
+    .count {
+        margin-left: 20px;
+        font-size: 15px;
+        opacity: 0.6;
+        margin-top: -17px;
+    }
+    
+    .matselect {
+        color: brown;
+        height: 10px;
+        outline: none;
+    }
+    
+    .bookcard {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2%;
+    }
+    
+    .entirebook {
+        border: 1px solid gainsboro;
+        width: 250px;
+        height: auto;
+        margin: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .bookimg {
+        width: 251px;
+        height: 321px;
+        background-color: gainsboro;
+        margin-top: -1px;
+    }
+    
+    .img1 {
+        width: 110px;
+        height: 140px;
+        margin-left: 70px;
+        margin-top: 35px;
+        cursor: pointer;
+    }
+    
+    .title {
+        font-size: medium;
+        margin-left: 13px;
+    }
+    
+    .para {
+        margin-top: -24px;
+        font-size: small;
+        color: gray;
+        margin-left: 14px;
+    }
+    
+    .rating {
+        font-size: 12px;
+        margin-top: -16px;
+        margin-left: 15px;
+        background: green;
+        color: white;
+        height: 15px;
+        width: 29px;
+        padding: 2px;
+    }
+    
+    .Star {
+        height: 11px;
+        width: 11px;
+        font-size: 10px;
+        margin-top: -1px;
+    }
+    
+    #del {
+        color: gray;
+    }
+    
+    #count {
+        //margin-top: -18px;
+        //margin-left: 55px;
+        margin-bottom: 70px;
+        font-size: small;
+        color: gainsboro;
+    }
+    
+    .dicounted-price {
+        margin-top: -5px;
+        margin-left: 13px;
+        font-size: revert;
+    }
+    
+    .actual-price {
+        margin-left: 73px;
+        margin-top: -20px;
+        text-decoration: line-through;
+        color: gray;
+    }
+    
+    .add-btn {
+        background-color: brown;
+        color: white;
+        border: aliceblue;
+        padding: 5px;
+        margin-left: 5%;
+        width: 40%;
+        cursor: pointer;
+    }
+    
+    .btn2 {
+        background-color: black;
+        color: white;
+        border: aliceblue;
+        padding: 5px;
+        margin-left: 6%;
+        width: 45%;
+        cursor: pointer;
+    }
+    
+    #fav-icons {
+        color: white;
+        font-size: 122%;
+    }
+    
+    .booktitle {
+        width: 55%;
+    }
+    
+    @media (max-width: 700px) {
         .bookcard {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: 2%;
+            width: 700px;
         }
-        
+        .book-count {
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        .sort {
+            margin-left: 330px;
+            margin-top: -48px;
+        }
+        .bookimg {
+            height: 327px;
+            width: 334px;
+        }
+        .img1 {
+            margin-left: 111px;
+        }
+        .count {
+            margin-top: -12px;
+        }
         .entirebook {
             border: 1px solid gainsboro;
-            width: 250px;
+            width: 334px;
             height: auto;
             margin: 20px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
-        
-        .bookimg {
-            width: 251px;
-            height: 321px;
-            background-color: gainsboro;
-            margin-top: -1px;
-        }
-        
-        .img1 {
-            width: 110px;
-            height: 140px;
-            margin-left: 70px;
-            margin-top: 35px;
-            cursor: pointer;
-        }
-        
         .title {
-            font-size: medium;
-            margin-left: 13px;
+            font-size: 21px;
         }
-        
-        .para {
-            margin-top: -24px;
-            font-size: small;
-            color: gray;
-            margin-left: 14px;
-        }
-        
         .rating {
             font-size: 12px;
-            margin-top: -16px;
-            margin-left: 15px;
-            background: green;
-            color: white;
-            height: 15px;
-            width: 29px;
-            padding: 2px;
+            margin-top: -7px;
         }
-        
-        .Star {
-            height: 11px;
-            width: 11px;
-            font-size: 10px;
-            margin-top: -1px;
-        }
-        
-        #del {
-            color: gray;
-        }
-        
-        #count {
-            //margin-top: -18px;
-            //margin-left: 55px;
-            margin-bottom: 70px;
-            font-size: small;
-            color: gainsboro;
-        }
-        
-        .dicounted-price {
-            margin-top: -5px;
-            margin-left: 13px;
-            font-size: revert;
-        }
-        
-        .actual-price {
-            margin-left: 73px;
-            margin-top: -20px;
-            text-decoration: line-through;
-            color: gray;
-        }
-        
-        .add-btn {
-            background-color: brown;
-            color: white;
-            border: aliceblue;
-            padding: 5px;
-            margin-left: 5%;
-            width: 40%;
-            cursor: pointer;
-        }
-        
         .btn2 {
-            background-color: black;
-            color: white;
-            border: aliceblue;
-            padding: 5px;
-            margin-left: 6%;
-            width: 45%;
-            cursor: pointer;
+            margin-top: -10px;
         }
-        
-        #fav-icons {
-            color: white;
-            font-size: 122%;
-        }
-        
-        .booktitle {
-            width: 55%;
-        }
-        
-        @media only screen and (min-device-width: 300px) and (max-device-width: 851px) and (-webkit-min-device-pixel-ratio: 1) {
-            .bookcard {
-                margin-left: 12%;
-            }
-            #book-count {
-                margin-left: 111%;
-            }
-            .sort {
-                margin-top: -11px;
-                margin-left: 37%;
-            }
-        }
+    }

@@ -30,7 +30,12 @@ import {AuthguradServiceService} from './Services/authgurad-service.service';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { MatBadgeModule } from "@angular/material/badge";
 import { PipePipe } from './pipes/pipe.pipe';
-import { AddminComponent } from './component/addmin/addmin.component';
+import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddandUpdateComponent } from './component/addand-update/addand-update.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { AddComponent } from './component/add/add.component';
+
 
 
 @NgModule({
@@ -44,8 +49,10 @@ import { AddminComponent } from './component/addmin/addmin.component';
     GetwishlistComponent,
     PlaceorderComponent,
     PipePipe,
-    AddminComponent,
-   
+    AddandUpdateComponent,
+   AdminComponent,
+   AddComponent,
+ 
   
    
     
@@ -75,6 +82,8 @@ import { AddminComponent } from './component/addmin/addmin.component';
     MatRadioModule,
     NgxPaginationModule,
     MatBadgeModule,
+    MatDialogModule,
+    MatButtonModule,
     BrowserAnimationsModule
   ],
   providers: [

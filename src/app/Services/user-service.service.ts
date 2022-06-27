@@ -30,6 +30,7 @@ export class UserServiceService {
     }
     return this.httpService.postService('login', reqData, true, headers)
   }
+  
   adminregistrationService(reqData: any) {
     let headers = {
       headers: new HttpHeaders({

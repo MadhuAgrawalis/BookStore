@@ -1,0 +1,61 @@
+<div>
+    <h1>Update</h1>
+    <form [formGroup]="UpdateForm" fxLayout="column" fxLayoutGap="0px">
+
+        <div>
+            <span>BookName</span>
+            <div>
+                <mat-form-field width="600px" appearance="outline">
+                    <input matInput [(ngModel)]="bookName" formControlName="bookName">
+                    <mat-error>bookname Required!</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <span>author</span>
+            <div>
+                <mat-form-field width="600px" appearance="outline">
+                    <input matInput [(ngModel)]="author" formControlName="author">
+                    <mat-error>author Required!</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <span>description</span>
+            <div>
+                <mat-form-field width="600px" appearance="outline">
+                    <input matInput [(ngModel)]="description" formControlName="description">
+                    <mat-error>description Required!</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <span>quantity</span>
+            <div>
+                <mat-form-field width="600px" appearance="outline">
+                    <input matInput [(ngModel)]="quantity" formControlName="quantity">
+                    <mat-error>quantity Required!</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <span>Price</span>
+            <div>
+                <mat-form-field width="600px" appearance="outline">
+                    <input matInput [(ngModel)]="price" formControlName="price">
+                    <mat-error>price Required!</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <span>DiscountPrice</span>
+            <div>
+                <mat-form-field width="600px " appearance="outline">
+                    <input matInput [(ngModel)]="discountPrice" formControlName="discountPrice">
+                    <mat-error>discountPrice Required!</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+    <button (click)="updateBook()">Update</button>
+</div>

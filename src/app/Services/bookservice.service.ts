@@ -12,8 +12,8 @@ export class BookserviceService {
   }
 
 getallbooks() {
-  this.token = localStorage.getItem('token')
-  console.log("inside getbook service");
+  // this.token = localStorage.getItem('token')
+  // console.log("inside getbook service");
   let headers = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
@@ -83,17 +83,17 @@ MyOrder(reqdata: any) {
   return this.httpService.putService('edit_user/',reqdata, true, header)
 }
 getCart() {
-  this.token = localStorage.getItem('token');
-  console.log('token',this.token);
+  // this.token = localStorage.getItem('token');
+  // console.log('token',this.token);
 
-  let header = {
+  let headers = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'x-access-token': this.token
     })
   }
-  console.log(header);
-  return this.httpService.getService('get_cart_items/', true, header);
+  console.log(headers);
+  return this.httpService.getService('get_cart_items/', true, headers);
 }
 
 
@@ -138,5 +138,32 @@ deleteWishlist(data:any){
   }
   return this.httpService.deleteService('remove_wishlist_item/'+data.product_id._id,data,true,header)
 }
+addnewbookService(reqData: any) {
+  let header = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'x-access-token': this.token
+    })
+  }
+  return this.httpService.postService('admin/add/book', reqData, true, header)
 
+}
+updatebookService(reqPayload: any, productID: any) {
+  let headers = {
+    headers: new HttpHeaders({
+      'x-access-token': this.token,
+      'content-Type': 'application/json'
+    })
+  }
+  return this.httpService.putService('admin/update/book/' + productID, reqPayload, true, headers);
+}
+updateCountService(productID: any, reqPayload: any) {
+  let headers = {
+    headers: new HttpHeaders({
+      'x-access-token': this.token,
+      'content-Type': 'application/json'
+    })
+  }
+  return this.httpService.putService('cart_item_quantity/' + productID, reqPayload, true, headers);
+}
 }

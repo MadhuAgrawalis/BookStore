@@ -32,7 +32,7 @@ export class LoginSignupComponent implements OnInit {
       password: ['', [Validators.required]],
       mobileNumber: ['', [Validators.required]],
       selectedValue: ['', [Validators.required]],
-     // service: ['advance']
+      service: ['advance']
     });
   }
   get f() { return this.loginForm.controls; }   
@@ -52,7 +52,8 @@ export class LoginSignupComponent implements OnInit {
       this.userservice.loginUserService(reqData).subscribe((response: any) => {
         console.log(response);
         localStorage.setItem('token',response.result.accessToken);
-       }, (error: any) => {
+        this.router.navigateByUrl('/dashbord/getallbook') 
+      }, (error: any) => {
         console.log(error);
        })
     }else if(this.loginForm.value.selectedValue=="Admin"){
@@ -60,7 +61,7 @@ export class LoginSignupComponent implements OnInit {
         console.log(result);
         localStorage.setItem('token',result.result.accessToken)
       })
-    this.router.navigateByUrl('/dashbord/getallbook')
+    this.router.navigateByUrl('/dashbord/admin')
   }
     
 };

@@ -30,25 +30,25 @@
 
 
                         <div fxLayout="row" fxLayoutGap="10px">
-
                             <div class="quantitiy" fxLayout="row">
-                                <img class="circle" src="../../../assets/remove_circle_outline_black_24dp.svg">
-                                <div class="inputBox" fxLayoutAlign="center center">1</div>
-                                <img class="circle" src="../../../assets/add_circle_outline_black_24dp.svg">
+                                <img class="circle" (click)="decrease(Book)" src="../../../assets/remove_circle_outline_black_24dp.svg">
+                                <div class="inputBox" fxLayoutAlign="center center">{{Book.quantityToBuy}}</div>
+                                <img class="circle" (click)="increase(Book)" src="../../../assets/add_circle_outline_black_24dp.svg">
                             </div>
 
-                            <button (click)="myRemoveCart(Book)" style="background-color: transparent;border: none;margin-left: 10px; ">Remove</button>
+
+                            <button (click)="myRemoveCart(Book)" style="background-color: transparent;border: none;margin-left: 10px;">Remove</button>
                         </div>
 
 
                     </div>
-                    <span class="example-spacer "></span>
+                    <span class="example-spacer"></span>
 
 
                 </div>
-                <mat-divider style="margin-top: 10px; "></mat-divider>
+                <mat-divider style="margin-top: 10px;"></mat-divider>
             </div>
-            <button (click)="nextStep()" class="placeorder " style="color: white;float: right; ">Place Order</button>
+            <button (click)="nextStep()" class="placeorder" style="color: white;float: right;">Place Order</button>
         </mat-expansion-panel>
 
         <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
@@ -59,10 +59,10 @@
             </mat-expansion-panel-header>
 
 
-            <div fxLayout="row " fxLayoutAlign="centercenter " fxLayoutGap="30px ">
+            <div fxLayout="row" fxLayoutAlign="centercenter" fxLayoutGap="30px ">
                 <form [formGroup]="useraddressform ">
-                    <div style="display: flex;flex-direction: column; ">
-                        <div style="display: flex;flex-direction: row; ">
+                    <div style="display: flex;flex-direction: column;">
+                        <div style="display: flex;flex-direction: row;">
 
                             <mat-form-field appearance="outline">
 
@@ -115,8 +115,8 @@
                 </form>
 
             </div>
-            <button (click)="nextStep()" class="continuebutton " style="color: white;float: right; ">Continue</button>
-            <button (click)="onSubmit()" class="continuebutton " style="color: white;float: right; "></button>
+            <button (click)="nextStep()" (click)="onSubmit()" class="continuebutton " style="color: white;float: right; ">Continue</button>
+            <!-- <button (click)="onSubmit()"></button> -->
         </mat-expansion-panel>
 
         <mat-expansion-panel [expanded]="step===2 " (opened)="setStep(2) " hideToggle>
@@ -154,9 +154,10 @@
             </div>
 
             <button (click)="ordersummary() " class="placeorder " style="color: white;float: right; ">CheckOut</button>
-            <!-- <button class="placeorder " style="color: white;float: left; ">total</button> -->
+
             <mat-panel-title>
-                Total:({{priceSum}})
+                <div class="placeorders " style="color:black;float: left; "> Total:({{priceSum}})
+                </div>
             </mat-panel-title>
         </mat-expansion-panel>
 

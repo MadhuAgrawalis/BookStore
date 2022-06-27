@@ -7,7 +7,7 @@
                 <a id="text">BookStore</a>
             </div>
 
-            <mat-card class="search" fxLayout="row" fxLayoutAlign="space-around center" fxHide.xs>
+            <mat-card class="search" fxLayout="row" fxLayoutAlign="space-around center">
                 <button mat-icon-button>
             <mat-icon class="searchIcon">search</mat-icon>
           </button>
@@ -35,11 +35,11 @@
             <!-- <div fxLayout="row" fxLayoutAlign=" " fxLayoutAlign.sm="end center">
                 <button class="cart" mat-button routerLink="./mycart">Cart<mat-icon>shopping_cart</mat-icon></button>
             </div> -->
-            <div class="cart" (click)="mycart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
+            <div class="cart" (click)="mycart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="20" fxLayoutGap="-12px">
                 <button style="background-color:darkred; border: none; cursor: pointer;" matBadge={{badgecount}} matBadgeSize="small" matBadgePosition="after" matBadgeColor="warn" [matBadgeHidden]="badgecount==0">
                 <img class="cartimg" src="../../../assets/shopping_cart_white_24dp (1).svg" alt="">
                 </button>
-                <p style="margin-top:-10px;">cart</p>
+                <p style="margin-top:-30px;">cart</p>
             </div>
 
 

@@ -14,7 +14,7 @@ export class QuickviewComponent implements OnInit {
   rating: any;
   token: any;
   comment: any;
-
+  
   
   
   constructor(private bookService: BookserviceService) { }

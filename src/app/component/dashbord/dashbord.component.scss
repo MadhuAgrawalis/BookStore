@@ -11,13 +11,19 @@
     background-color: brown;
 }
 
+// #text {
+//     color: white;
+// }
 #text {
+    margin-left: 10px;
+    //margin-top: -5px;
     color: white;
+    margin-top: -2px;
 }
 
 .img-Icon {
     padding-left: 64%;
-    padding-right: 10%;
+    padding-right: 6%;
     padding-top: 3%;
 }
 
@@ -71,9 +77,10 @@
 .cart {
     padding-bottom: 20px;
     padding-left: 12%;
-    padding-right: 12%;
-    margin-top: 32px;
+    padding-right: 9%;
+    margin-top: 40px;
     color: white;
+    font-size: 15px;
 }
 
 // }
@@ -99,12 +106,31 @@
     background: white;
 }
 
-@media only screen and (min-device-width: 300px) and (max-device-width: 851px) and (-webkit-min-device-pixel-ratio: 1) {
+// @media only screen and (min-device-width: 300px) and (max-device-width: 851px) and (-webkit-min-device-pixel-ratio: 1) {
+@media (max-width: 400px) {
     .Profile {
-        margin-right: -50%;
+        margin-right: -1%;
+        margin-top: -6px;
     }
     .container {
         height: 120%;
-        width: 132%;
+        width: 195%;
+    }
+    #text {
+        visibility: hidden;
+    }
+    .search {
+        margin-left: 6%;
+        width: 48%;
+        height: 54%;
+        padding: 0px;
+    }
+    .cart {
+        padding-bottom: 20px;
+        padding-left: 7%;
+        padding-right: 1%;
+        margin-top: 22px;
+        color: white;
+        font-size: 10px;
     }
 }
