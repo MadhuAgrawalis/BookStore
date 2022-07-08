@@ -151,7 +151,7 @@ export class MycartComponent implements OnInit {
      
   })
   
-  }
+}
 
 
 
